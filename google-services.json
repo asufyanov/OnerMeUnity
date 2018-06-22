@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "896051692086",
+    "firebase_url": "https://kitapp-a9a9a.firebaseio.com",
+    "project_id": "kitapp-a9a9a",
+    "storage_bucket": "kitapp-a9a9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896051692086:android:f64973e91a441575",
+        "android_client_info": {
+          "package_name": "com.Sheberkhana.OnerMeUnity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896051692086-3phl08uru4nq7k99llgvlvt5cmfqr2s5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Sheberkhana.OnerMeUnity",
+            "certificate_hash": "819432f640404109d856ce96476868e8adb4826d"
+          }
+        },
+        {
+          "client_id": "896051692086-dhp54ua5rti17eii9a32huh3gi48rt3e.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "896051692086-nilq6vmlkp1gqbn596fu187so54brkhm.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "896051692086-nilq6vmlkp1gqbn596fu187so54brkhm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmo-5f-BIuMQNXU5CKsMJLQ0_8JzOTn8s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896051692086-dhp54ua5rti17eii9a32huh3gi48rt3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
