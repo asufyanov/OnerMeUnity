@@ -6,20 +6,18 @@
                 {
                     "source": "C:\\AndroidTestProject\\OnerMeUnity\\src\\main\\res\\values-v14\\styles.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "0",
-                        "startOffsets": "53",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "153"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "59",
+                        "endColumns": "102",
+                        "endOffsets": "157"
                     },
                     "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "154"
+                        "endColumns": "95",
+                        "endOffsets": "146"
                     }
                 }
             ]

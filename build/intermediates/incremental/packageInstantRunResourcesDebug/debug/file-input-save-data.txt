@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jun 22 16:08:35 ALMT 2018
+#Tue Jun 26 00:44:07 ALMT 2018
 60.set=ASSET
 52.set=ASSET
 53.base=C\:\\AndroidTestProject\\OnerMeUnity\\build\\intermediates\\assets\\debug

@@ -3,6 +3,7 @@ package com.Sheberkhana.OnerMeUnity.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.Sheberkhana.OnerMeUnity.DisplayNewsActivity;
 import com.Sheberkhana.OnerMeUnity.Models.News;
 import com.Sheberkhana.OnerMeUnity.R;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -52,12 +54,14 @@ public class RecyclerNewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         NewsViewHolder vh = (NewsViewHolder) holder;
         vh.title_tv.setText(news.get(position).getTitle());
-        vh.description_tv.setText(news.get(position).getDescription());
+        vh.description_tv.setText(Html.fromHtml(news.get(position).getDescription()));
         if (news.get(position).getPreviewImage() != null) {
+            RequestOptions options = new RequestOptions();
+            options.fitCenter();
             Glide
                     .with(parentContext)
                     .load(news.get(position).getPreviewImage())
-                    //.centerCrop()
+                    .apply(options)
                     //.placeholder(R.drawable.app_banner)
                     .into(vh.imageView);
         }

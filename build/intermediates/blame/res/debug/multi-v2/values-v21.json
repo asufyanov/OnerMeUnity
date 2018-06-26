@@ -14,12 +14,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,267,268,275,279,285,288",
+                        "startLines": "2,3,4,5,267,268,275,279,284,287",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19570,19686,20143,20437,20840,21012",
-                        "endLines": "2,3,4,5,267,268,275,279,287,292",
+                        "startOffsets": "55,159,223,290,19570,19686,20143,20437,20832,21004",
+                        "endLines": "2,3,4,5,267,268,275,279,286,291",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19681,19807,20264,20560,21007,21345"
+                        "endOffsets": "154,218,285,349,19681,19807,20264,20560,20999,21337"
                     }
                 },
                 {
@@ -63,20 +63,18 @@
                 {
                     "source": "C:\\AndroidTestProject\\OnerMeUnity\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "0",
-                        "startOffsets": "53",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "157"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "59",
+                        "endColumns": "106",
+                        "endOffsets": "161"
                     },
                     "to": {
                         "startLines": "283",
                         "startColumns": "4",
                         "startOffsets": "20732",
-                        "endLines": "284",
-                        "endColumns": "8",
-                        "endOffsets": "20835"
+                        "endColumns": "99",
+                        "endOffsets": "20827"
                     }
                 },
                 {

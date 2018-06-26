@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.Sheberkhana.OnerMeUnity.Adapters.RecyclerNewsAdapter;
+import com.Sheberkhana.OnerMeUnity.Adapters.RecyclerObjectsAdapter;
+import com.Sheberkhana.OnerMeUnity.Models.ArtObject;
 import com.Sheberkhana.OnerMeUnity.Models.News;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,11 +29,21 @@ public class MainActivity extends AppCompatActivity {
     Button btn;
     FloatingActionButton fab;
     ArrayList<News> news;
+    ArrayList<ArtObject> artObjects;
 
 
     RecyclerView recyclerView;
+    RecyclerView recyclerViewObjects;
+
     RecyclerNewsAdapter recyclerNewsAdapter;
+    RecyclerObjectsAdapter recyclerObjectsAdapter;
+
+
+
     LinearLayoutManager linearLayoutManager;
+    LinearLayoutManager linearLayoutManagerH;
+
+
 
     private SwipeRefreshLayout swipeContainer;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -61,27 +73,39 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
+        recyclerViewObjects = (RecyclerView) findViewById(R.id.recyclerViewH);
+        recyclerViewObjects.setHasFixedSize(true);
+
         linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManagerH = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerViewObjects.setLayoutManager(linearLayoutManagerH);
 
         news = new ArrayList<>();
+        artObjects = new ArrayList<>();
         recyclerNewsAdapter = new RecyclerNewsAdapter(news);
+        recyclerObjectsAdapter = new RecyclerObjectsAdapter(artObjects);
 
         recyclerView.setAdapter(recyclerNewsAdapter);
+        recyclerViewObjects.setAdapter(recyclerObjectsAdapter);
 
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 news.clear();
+                artObjects.clear();
                 recyclerNewsAdapter.notifyDataSetChanged();
                 fetchNews();
+                fetchObjects();
                 recyclerNewsAdapter.notifyDataSetChanged();
 
             }
         });
 
         fetchNews();
+        fetchObjects();
 
 
     }
@@ -102,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                             recyclerNewsAdapter.notifyDataSetChanged();
+
                             swipeContainer.setRefreshing(false);
                         } else {
                             swipeContainer.setRefreshing(false);
@@ -109,6 +134,33 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+    }
+
+    private void fetchObjects() {
+        db.collection("artObjects")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                ArtObject tempObject = document.toObject(ArtObject.class);
+                                artObjects.add(tempObject);
+
+
+                            }
+                            recyclerObjectsAdapter.notifyDataSetChanged();
+
+                            swipeContainer.setRefreshing(false);
+                        } else {
+                            swipeContainer.setRefreshing(false);
+                            Log.w("FirestoreTest", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
 
     }
 }

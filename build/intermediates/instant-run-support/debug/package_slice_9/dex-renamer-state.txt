@@ -1,4 +1,4 @@
-#Fri Jun 22 16:05:22 ALMT 2018
+#Tue Jun 26 00:44:14 ALMT 2018
 base.0=C\:\\AndroidTestProject\\OnerMeUnity\\build\\intermediates\\transforms\\dexMerger\\debug\\9
 path.0=classes.dex
 renamed.0=classes.dex
