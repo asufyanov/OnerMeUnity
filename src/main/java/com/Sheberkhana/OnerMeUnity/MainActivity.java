@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.Sheberkhana.OnerMeUnity.Adapters.RecyclerNewsAdapter;
 import com.Sheberkhana.OnerMeUnity.Adapters.RecyclerObjectsAdapter;
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     FloatingActionButton fab;
+
+    TextView tv_objects;
+    TextView tv_allObjects;
+
     ArrayList<News> news;
     ArrayList<ArtObject> artObjects;
 
@@ -39,15 +44,10 @@ public class MainActivity extends AppCompatActivity {
     RecyclerObjectsAdapter recyclerObjectsAdapter;
 
 
-
     LinearLayoutManager linearLayoutManager;
     LinearLayoutManager linearLayoutManagerH;
-
-
-
-    private SwipeRefreshLayout swipeContainer;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    private SwipeRefreshLayout swipeContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        tv_allObjects = (TextView) findViewById(R.id.tv_allObjects);
+        tv_objects = (TextView) findViewById(R.id.tv_objects);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -101,6 +104,20 @@ public class MainActivity extends AppCompatActivity {
                 fetchObjects();
                 recyclerNewsAdapter.notifyDataSetChanged();
 
+            }
+        });
+
+        tv_objects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAllObjects();
+            }
+        });
+
+        tv_allObjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAllObjects();
             }
         });
 
@@ -162,5 +179,10 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
+    }
+
+    private void openAllObjects() {
+        Intent intent = new Intent(this, AllObjectsActivity.class);
+        startActivity(intent);
     }
 }

@@ -1562,15 +1562,15 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
     public static final int indicatorGravity=0x7f0300c9;
@@ -1609,9 +1609,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>8</td><td></td></tr>
-     * <tr><td>invisible</td><td>4</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
+     * <tr><td>gone</td><td>8</td><td>Completely hidden, as if the view had not been added.</td></tr>
+     * <tr><td>invisible</td><td>4</td><td>Not displayed, but taken into account during layout (space is left for it).</td></tr>
+     * <tr><td>visible</td><td>0</td><td>Visible on screen; the default value.</td></tr>
      * </table>
      */
     public static final int indicatorVisibility=0x7f0300cd;
@@ -2263,7 +2263,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3978,21 +3978,22 @@ public final class R {
     public static final int ellipse=0x7f070076;
     public static final int googleg_disabled_color_18=0x7f070077;
     public static final int googleg_standard_color_18=0x7f070078;
-    public static final int navigation_empty_icon=0x7f070079;
-    public static final int notification_action_background=0x7f07007a;
-    public static final int notification_bg=0x7f07007b;
-    public static final int notification_bg_low=0x7f07007c;
-    public static final int notification_bg_low_normal=0x7f07007d;
-    public static final int notification_bg_low_pressed=0x7f07007e;
-    public static final int notification_bg_normal=0x7f07007f;
-    public static final int notification_bg_normal_pressed=0x7f070080;
-    public static final int notification_icon_background=0x7f070081;
-    public static final int notification_template_icon_bg=0x7f070082;
-    public static final int notification_template_icon_low_bg=0x7f070083;
-    public static final int notification_tile_bg=0x7f070084;
-    public static final int notify_panel_notification_icon_bg=0x7f070085;
-    public static final int tooltip_frame_dark=0x7f070086;
-    public static final int tooltip_frame_light=0x7f070087;
+    public static final int ic_info_outline_black_24dp=0x7f070079;
+    public static final int navigation_empty_icon=0x7f07007a;
+    public static final int notification_action_background=0x7f07007b;
+    public static final int notification_bg=0x7f07007c;
+    public static final int notification_bg_low=0x7f07007d;
+    public static final int notification_bg_low_normal=0x7f07007e;
+    public static final int notification_bg_low_pressed=0x7f07007f;
+    public static final int notification_bg_normal=0x7f070080;
+    public static final int notification_bg_normal_pressed=0x7f070081;
+    public static final int notification_icon_background=0x7f070082;
+    public static final int notification_template_icon_bg=0x7f070083;
+    public static final int notification_template_icon_low_bg=0x7f070084;
+    public static final int notification_tile_bg=0x7f070085;
+    public static final int notify_panel_notification_icon_bg=0x7f070086;
+    public static final int tooltip_frame_dark=0x7f070087;
+    public static final int tooltip_frame_light=0x7f070088;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -4202,19 +4203,21 @@ public final class R {
     public static final int transition_position=0x7f0800cc;
     public static final int transition_scene_layoutid_cache=0x7f0800cd;
     public static final int transition_transform=0x7f0800ce;
-    public static final int tv_description=0x7f0800cf;
-    public static final int tv_title=0x7f0800d0;
-    public static final int uniform=0x7f0800d1;
-    public static final int up=0x7f0800d2;
-    public static final int useLogo=0x7f0800d3;
-    public static final int vertical=0x7f0800d4;
-    public static final int view_offset_helper=0x7f0800d5;
-    public static final int visible=0x7f0800d6;
-    public static final int wide=0x7f0800d7;
-    public static final int withText=0x7f0800d8;
-    public static final int wrap=0x7f0800d9;
-    public static final int wrap_content=0x7f0800da;
-    public static final int zoom=0x7f0800db;
+    public static final int tv_allObjects=0x7f0800cf;
+    public static final int tv_description=0x7f0800d0;
+    public static final int tv_objects=0x7f0800d1;
+    public static final int tv_title=0x7f0800d2;
+    public static final int uniform=0x7f0800d3;
+    public static final int up=0x7f0800d4;
+    public static final int useLogo=0x7f0800d5;
+    public static final int vertical=0x7f0800d6;
+    public static final int view_offset_helper=0x7f0800d7;
+    public static final int visible=0x7f0800d8;
+    public static final int wide=0x7f0800d9;
+    public static final int withText=0x7f0800da;
+    public static final int wrap=0x7f0800db;
+    public static final int wrap_content=0x7f0800dc;
+    public static final int zoom=0x7f0800dd;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;
@@ -4258,45 +4261,46 @@ public final class R {
     public static final int abc_search_view=0x7f0a0018;
     public static final int abc_select_dialog_material=0x7f0a0019;
     public static final int abc_tooltip=0x7f0a001a;
-    public static final int activity_display_news=0x7f0a001b;
-    public static final int activity_main=0x7f0a001c;
-    public static final int content_display_news=0x7f0a001d;
-    public static final int design_bottom_navigation_item=0x7f0a001e;
-    public static final int design_bottom_sheet_dialog=0x7f0a001f;
-    public static final int design_layout_snackbar=0x7f0a0020;
-    public static final int design_layout_snackbar_include=0x7f0a0021;
-    public static final int design_layout_tab_icon=0x7f0a0022;
-    public static final int design_layout_tab_text=0x7f0a0023;
-    public static final int design_menu_item_action_area=0x7f0a0024;
-    public static final int design_navigation_item=0x7f0a0025;
-    public static final int design_navigation_item_header=0x7f0a0026;
-    public static final int design_navigation_item_separator=0x7f0a0027;
-    public static final int design_navigation_item_subheader=0x7f0a0028;
-    public static final int design_navigation_menu=0x7f0a0029;
-    public static final int design_navigation_menu_item=0x7f0a002a;
-    public static final int design_text_input_password_icon=0x7f0a002b;
-    public static final int news_item=0x7f0a002c;
-    public static final int notification_action=0x7f0a002d;
-    public static final int notification_action_tombstone=0x7f0a002e;
-    public static final int notification_media_action=0x7f0a002f;
-    public static final int notification_media_cancel_action=0x7f0a0030;
-    public static final int notification_template_big_media=0x7f0a0031;
-    public static final int notification_template_big_media_custom=0x7f0a0032;
-    public static final int notification_template_big_media_narrow=0x7f0a0033;
-    public static final int notification_template_big_media_narrow_custom=0x7f0a0034;
-    public static final int notification_template_custom_big=0x7f0a0035;
-    public static final int notification_template_icon_group=0x7f0a0036;
-    public static final int notification_template_lines_media=0x7f0a0037;
-    public static final int notification_template_media=0x7f0a0038;
-    public static final int notification_template_media_custom=0x7f0a0039;
-    public static final int notification_template_part_chronometer=0x7f0a003a;
-    public static final int notification_template_part_time=0x7f0a003b;
-    public static final int object_item=0x7f0a003c;
-    public static final int select_dialog_item_material=0x7f0a003d;
-    public static final int select_dialog_multichoice_material=0x7f0a003e;
-    public static final int select_dialog_singlechoice_material=0x7f0a003f;
-    public static final int support_simple_spinner_dropdown_item=0x7f0a0040;
-    public static final int view_carousel=0x7f0a0041;
+    public static final int activity_all_objects=0x7f0a001b;
+    public static final int activity_display_news=0x7f0a001c;
+    public static final int activity_main=0x7f0a001d;
+    public static final int content_display_news=0x7f0a001e;
+    public static final int design_bottom_navigation_item=0x7f0a001f;
+    public static final int design_bottom_sheet_dialog=0x7f0a0020;
+    public static final int design_layout_snackbar=0x7f0a0021;
+    public static final int design_layout_snackbar_include=0x7f0a0022;
+    public static final int design_layout_tab_icon=0x7f0a0023;
+    public static final int design_layout_tab_text=0x7f0a0024;
+    public static final int design_menu_item_action_area=0x7f0a0025;
+    public static final int design_navigation_item=0x7f0a0026;
+    public static final int design_navigation_item_header=0x7f0a0027;
+    public static final int design_navigation_item_separator=0x7f0a0028;
+    public static final int design_navigation_item_subheader=0x7f0a0029;
+    public static final int design_navigation_menu=0x7f0a002a;
+    public static final int design_navigation_menu_item=0x7f0a002b;
+    public static final int design_text_input_password_icon=0x7f0a002c;
+    public static final int news_item=0x7f0a002d;
+    public static final int notification_action=0x7f0a002e;
+    public static final int notification_action_tombstone=0x7f0a002f;
+    public static final int notification_media_action=0x7f0a0030;
+    public static final int notification_media_cancel_action=0x7f0a0031;
+    public static final int notification_template_big_media=0x7f0a0032;
+    public static final int notification_template_big_media_custom=0x7f0a0033;
+    public static final int notification_template_big_media_narrow=0x7f0a0034;
+    public static final int notification_template_big_media_narrow_custom=0x7f0a0035;
+    public static final int notification_template_custom_big=0x7f0a0036;
+    public static final int notification_template_icon_group=0x7f0a0037;
+    public static final int notification_template_lines_media=0x7f0a0038;
+    public static final int notification_template_media=0x7f0a0039;
+    public static final int notification_template_media_custom=0x7f0a003a;
+    public static final int notification_template_part_chronometer=0x7f0a003b;
+    public static final int notification_template_part_time=0x7f0a003c;
+    public static final int object_item=0x7f0a003d;
+    public static final int select_dialog_item_material=0x7f0a003e;
+    public static final int select_dialog_multichoice_material=0x7f0a003f;
+    public static final int select_dialog_singlechoice_material=0x7f0a0040;
+    public static final int support_simple_spinner_dropdown_item=0x7f0a0041;
+    public static final int view_carousel=0x7f0a0042;
   }
   public static final class menu {
     public static final int menu_scrolling=0x7f0b0000;
@@ -8364,15 +8368,15 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
+     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
+     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
+     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
+     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
+     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
+     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      *
      * @attr name com.Sheberkhana.OnerMeUnity:indicatorGravity
@@ -8431,9 +8435,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>8</td><td></td></tr>
-     * <tr><td>invisible</td><td>4</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
+     * <tr><td>gone</td><td>8</td><td>Completely hidden, as if the view had not been added.</td></tr>
+     * <tr><td>invisible</td><td>4</td><td>Not displayed, but taken into account during layout (space is left for it).</td></tr>
+     * <tr><td>visible</td><td>0</td><td>Visible on screen; the default value.</td></tr>
      * </table>
      *
      * @attr name com.Sheberkhana.OnerMeUnity:indicatorVisibility
@@ -10100,7 +10104,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>

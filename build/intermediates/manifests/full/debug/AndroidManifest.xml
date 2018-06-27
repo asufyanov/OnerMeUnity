@@ -99,6 +99,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.Sheberkhana.OnerMeUnity.DisplayNewsActivity" />
+        <activity android:name="com.Sheberkhana.OnerMeUnity.AllObjectsActivity" />
         <!-- To support the ODG R7 in stereo mode we must add the following library. -->
         <uses-library
             android:name="com.osterhoutgroup.api.ext"
